@@ -1,6 +1,6 @@
 const formAddTodo = document.querySelector('.form-add-todo')
 const todosContainer = document.querySelector('.todos-container')
-const inputSearchTodo = document.querySelector('.form-search input') //input como seletor
+const inputSearchTodo = document.querySelector('.form-search input')
 
 formAddTodo.addEventListener('submit', event => {
     event.preventDefault()
