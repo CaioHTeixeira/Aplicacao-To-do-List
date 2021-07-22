@@ -1,5 +1,5 @@
 .container {
-  max-width: 400px;
+  max-width: 450px;
 }
 
 input[type=text],
@@ -7,7 +7,7 @@ input[type=text]:focus {
   color: #fff;
   border: none;
   background: rgba(0,0,0,0.2);
-  max-width: 400px;
+  max-width: 450px;
 }
 
 .todos-container li {
@@ -16,6 +16,18 @@ input[type=text]:focus {
 
 i[data-trash] {
   cursor: pointer;
+}
+
+.span-todo {
+  word-break: normal;
+}
+
+.button-add-todo {
+  margin: 10px;
+  text-align: center;
+  border: none;
+  color: white;
+  background-color:darkorchid;
 }
 
 .hidden {
