@@ -23,8 +23,8 @@ const showTodo = todo => {
 }
 
 const removeTodo = clickedElement => {
-    const todo = document.querySelector(`[data-todo="${clickedElement.dataset.trash}"]`)
     const trashDataValue = clickedElement.dataset.trash
+    const todo = document.querySelector(`[data-todo="${trashDataValue}"]`)
     
     if (trashDataValue) {
         todo.remove()
@@ -40,14 +40,14 @@ formAddTodo.addEventListener('submit', event => {
 
     const inputValue = event.target.add.value.trim()
     
-    if (inputValue.length) {
+    if (inputValue) {
         todosContainer.innerHTML += addTodo(inputValue)
         resetFormAddTodo(event)
     } 
 })
 
 buttonAddTodo.addEventListener('click', () => {
-    const inputValue = formAddTodo.add.value
+    const inputValue = formAddTodo.add.value.trim()
     
     if (inputValue) {
         todosContainer.innerHTML += addTodo(inputValue)
@@ -58,7 +58,7 @@ buttonAddTodo.addEventListener('click', () => {
 todosContainer.addEventListener('click', event => {
     const clickedElement = event.target
     
-    removeTodo()
+    removeTodo(clickedElement)
 })
 
 inputSearchTodo.addEventListener('input', event => {
